@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+ 
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-image: linear-gradient(green, yellow, blue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
+  
+.buttonAddTask{
+    font-size: large;
+    background-color: purple;
+    color: white;
+}  
+.buttonChangeToOpen{
+    font-size: small;
+    background-color: lightpink;
+    color: black;
+}  
+.buttonChangeToComplete{
+    font-size: small;
+    background-color: green;
+    color: white;
+}  
+
+.buttonDelete{
+    font-size: small;
+    background-color: red;
+    color: white;
+    
+}

@@ -1,0 +1,27 @@
+<h1>To-Do List:</h1>
+
+<ul id="outstandingItems" *ngFor="let task of tasks">
+    <li *ngIf="!this.task.completed" ><button class="buttonChangeToComplete" (click) ="completeTask(task.id)">Mark As Complete</button> - - <button class="buttonDelete" (click) ="removeTask(task.id)">Remove</button> - -  {{task.task}}</li>
+</ul>
+
+<div *ngIf="!tasks?.length" class="msg">
+    <h2>Your Todo List is Empty! Neat!</h2>
+    </div>
+
+<button class="buttonAddTask" (click) ="toggleInfo()">{{addTaskButtonText}}</button>
+
+<div *ngIf="showAddTask">
+    <br>
+    <form #addTaskForm="ngForm" (ngSubmit)="addTask(addTaskForm)">
+        <label for="task">Task Name:</label>
+        <input name="task" id="task" ngModel />
+        <button>Submit</button>
+    </form>
+
+</div>
+
+
+<h1>Completed Tasks:</h1>
+<ul *ngFor="let task of tasks">
+    <li *ngIf="this.task.completed" ><button class="buttonChangeToOpen" (click) ="completeTask(task.id)">Mark As Not Complete</button> - - <button class="buttonDelete" (click) ="removeTask(task.id)">Remove</button> - -  {{task.task}}</li>
+</ul>
